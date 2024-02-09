@@ -15,4 +15,9 @@ public class DocumentServiceImpl implements DocumentService {
     public List<Document> getAllDocuments() {
         return documentRepository.findAll();
     }
+
+    @Override
+    public Document getDocumentById(Long id) {
+        return documentRepository.findById(id).orElse(null);
+    }
 }
