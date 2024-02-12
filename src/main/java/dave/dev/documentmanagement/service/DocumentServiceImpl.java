@@ -20,4 +20,9 @@ public class DocumentServiceImpl implements DocumentService {
     public Document getDocumentById(Long id) {
         return documentRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public Document createDocument(Document document) {
+        return documentRepository.save(document);
+    }
 }
