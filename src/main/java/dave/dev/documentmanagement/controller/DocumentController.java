@@ -29,4 +29,9 @@ public class DocumentController {
         return documentService.createDocument(document);
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteDocument(@PathVariable Long id) {
+        documentService.deleteDocument(id);
+    }
+
 }
